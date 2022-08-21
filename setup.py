@@ -7,6 +7,7 @@ import subprocess
 import sys
 
 import setuptools
+from setuptools_rust import Binding, RustExtension
 
 
 try:
@@ -69,7 +70,7 @@ setuptools.setup(
                 "pytest>=4.5.0",
                 "scikit-learn>=1.0.1",
                 "sqlalchemy>=1.4",
-                "sympy>=1.10.1"
+                "sympy>=1.10.1",
             ]
         ),
         "benckmarks": base_packages + ["scikit-learn", "torch", "vowpalwabbit"],
@@ -127,4 +128,5 @@ setuptools.setup(
             "embedsignature": True,
         },
     ),
+    rust_extensions=[RustExtension("river_rust_stats.river_rust_stats", binding=Binding.PyO3)],
 )

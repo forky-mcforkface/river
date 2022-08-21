@@ -1,5 +1,5 @@
 [build-system]
-requires = ["cython", "numpy", "setuptools", "wheel"]
+requires = ["cython", "numpy", "setuptools", "wheel", "setuptools-rust"]
 
 [tool.pytest.ini_options]
 addopts = [
@@ -51,6 +51,6 @@ module = [
     "graphviz.*",
     "vaex.*",
     "torch.*",
-    "sqlalchemy.*"
+    "sqlalchemy.*",
 ]
 ignore_missing_imports = true
