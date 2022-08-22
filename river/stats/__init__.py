@@ -7,7 +7,7 @@ from .entropy import Entropy
 from .ewmean import EWMean, FastEWMean
 from .ewvar import EWVar, FastEWVar
 from .iqr import IQR, RollingIQR, FastIQR
-from .kurtosis import Kurtosis
+from .kurtosis import Kurtosis, FastKurtosis
 from .link import Link
 from .mad import MAD
 from .maximum import AbsMax, Max, RollingAbsMax, RollingMax
@@ -20,7 +20,7 @@ from .ptp import PeakToPeak, RollingPeakToPeak
 from .quantile import Quantile, RollingQuantile, FastQuantile, FastRollingQuantile
 from .sem import SEM
 from .shift import Shift
-from .skew import Skew
+from .skew import Skew, FastSkew
 from .summing import Sum
 from .var import Var
 
@@ -63,4 +63,6 @@ __all__ = [
     "FastEWMean",
     "FastEWVar",
     "FastIQR",
+    "FastKurtosis",
+    "FastSkew",
 ]
