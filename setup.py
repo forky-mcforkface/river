@@ -69,6 +69,7 @@ setuptools.setup(
                 "pre-commit>=2.9.2",
                 "pytest>=4.5.0",
                 "scikit-learn>=1.0.1",
+                "setuptools-rust>=1.5.1",
                 "sqlalchemy>=1.4",
                 "sympy>=1.10.1",
             ]
@@ -129,4 +130,6 @@ setuptools.setup(
         },
     ),
     rust_extensions=[RustExtension("river._rust_stats", binding=Binding.PyO3)],
+    # rust extensions are not zip safe, just like C-extensions.
+    zip_safe=False,
 )
